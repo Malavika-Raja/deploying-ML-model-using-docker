@@ -154,9 +154,6 @@ venv.bak/
 # mkdocs documentation
 /site
 
-#joblib files
-*.joblib
-
 # mypy
 .mypy_cache/
 .dmypy.json
