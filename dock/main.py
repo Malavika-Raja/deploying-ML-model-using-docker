@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel, ConfigDict
 import joblib
 import numpy as np
+
 # main application object
 app = FastAPI(title ="California Housing Price Prediction API")
 # loaded the pre-trained model into memory
