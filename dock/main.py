@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, ConfigDict
 import joblib
 import numpy as np
@@ -57,3 +58,6 @@ async def predict_price(features: HouseFeatures):
 
     return {"predicted_median_house_value":f"${prediction * 100000:.2f}"}
 
+@app.get("/",tags=["General"])
+async def read_root():
+    return RedirectResponse(url="/docs")
