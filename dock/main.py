@@ -57,6 +57,3 @@ async def predict_price(features: HouseFeatures):
 
     return {"predicted_median_house_value":f"${prediction * 100000:.2f}"}
 
-@app.get("/",tags=["General"])
-async def read_root():
-    return {"message":"Welcome to the Housing Price Prediction API!"}
